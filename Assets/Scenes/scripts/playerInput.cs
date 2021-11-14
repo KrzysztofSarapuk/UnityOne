@@ -18,28 +18,24 @@ public class playerInput : MonoBehaviour
             Debug.Log("space pressed");
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             GetComponent<movementController>().Move(new Vector2Int(0, 1));
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            GetComponent<movementController>().Move(new Vector2Int(0, -1));
+            GetComponent<movementController>().Move(new Vector2Int(-1, 0));
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             GetComponent<movementController>().Move(new Vector2Int(1, 0));
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            GetComponent<movementController>().Move(new Vector2Int(-1, 0));
+            GetComponent<movementController>().Move(new Vector2Int(0, -1));
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-           
-        }
     }
 }
