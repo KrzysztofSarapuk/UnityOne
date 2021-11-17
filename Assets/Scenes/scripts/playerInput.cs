@@ -20,21 +20,21 @@ public class playerInput : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            GetComponent<movementController>().Move(new Vector2Int(0, 1));
+            GetComponent<movementController>().Move(new Vector2Int(0, 0));
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            GetComponent<movementController>().Move(new Vector2Int(-1, 0));
+            GetComponent<movementController>().Move3(new Vector2Int(0, 0));
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            GetComponent<movementController>().Move(new Vector2Int(1, 0));
+            GetComponent<movementController>().Move2(new Vector2Int(0, 0));
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            GetComponent<movementController>().Move(new Vector2Int(0, -1));
+            GetComponent<movementController>().Move4(new Vector2Int(0, 0));
         }
 
     }
