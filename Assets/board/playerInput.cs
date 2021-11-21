@@ -22,25 +22,25 @@ public class playerInput : MonoBehaviour
         {
             GetComponent<movementController>().Move(new Vector2Int(0, 0));
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            GetComponent<movementController>().Move3(new Vector2Int(0, 0));
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftArrow))
+        //{
+        //    GetComponent<movementController>().Move3(new Vector2Int(0, 0));
+        //}
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            GetComponent<movementController>().Move2(new Vector2Int(0, 0));
-        }
+        //if (Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    GetComponent<movementController>().Move2(new Vector2Int(0, 0));
+        //}
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            GetComponent<movementController>().Move4(new Vector2Int(0, 0));
-        }
+        //if (Input.GetKeyDown(KeyCode.DownArrow))
+        //{
+        //    GetComponent<movementController>().Move4(new Vector2Int(0, 0));
+        //}
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            GetComponent<movementController>().Move5(new Vector2Int(0, 0));
-        }
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    GetComponent<movementController>().Move5(new Vector2Int(0, 0));
+        //}
 
     }
 }
