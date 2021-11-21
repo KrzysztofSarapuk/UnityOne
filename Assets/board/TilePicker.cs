@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class TilePicker : MonoBehaviour
 {
-    TileController hoveredTile;
+    ISelectableItem hoveredTile;
     public LayerMask mask;
+
+    private void Awake()
+    {
+        Disable();
+    }
+
     private void Update()
     {
         Ray promien = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
-
         if (Physics.Raycast(promien, out hitInfo, 50f, mask.value))
         {
             //to dzieje siê tylko wtedy gdy trafimi w jakiœ obiekt
-            TileController tile = hitInfo.collider.GetComponent<TileController>();
+            ISelectableItem tile = hitInfo.collider.GetComponentInParent<ISelectableItem>();
             if (tile == null)
                 return;
 
@@ -37,10 +42,21 @@ public class TilePicker : MonoBehaviour
                 hoveredTile = null;
             }
         }
-
     }
 
+
+    public void Enable(LayerMask selectMask)
+    {
+        mask = selectMask;
+        enabled = true;
+    }
+
+    public void Disable()
+    {
+        enabled = false;
+    }
 }
+
 
 
 

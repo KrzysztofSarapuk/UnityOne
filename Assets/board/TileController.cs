@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileController : MonoBehaviour
+public class TileController : MonoBehaviour, ISelectableItem
 {
     public void OnHoverStart()
     {
@@ -14,4 +14,5 @@ public class TileController : MonoBehaviour
         transform.localScale = Vector3.one;
     }
 }
+
 
