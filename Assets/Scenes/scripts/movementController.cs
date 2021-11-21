@@ -39,4 +39,10 @@ public class movementController : MonoBehaviour
         transform.position += new Vector3(direction.x, 0, direction.y);
         GetComponent<Animator>().Play("moveback");
     }
+
+    public void Move5(Vector2Int direction)
+    {
+        //transform.position += new Vector3(direction.x, 0, direction.y);
+        GetComponent<Animator>().Play("attackLeft");
+    }
 }
